@@ -1,0 +1,7 @@
+{% macro icon_label(label) -%}
+    <span class="label">{{ label }}</span>
+{%- endmacro %}
+
+{% macro icon_label_clickable(href="#", icon_name="", label="") -%}
+    <a href="{{ href }}" class="icon alt {{ icon_name }}">{{ icon_label(label) }}</a>
+{%- endmacro %}

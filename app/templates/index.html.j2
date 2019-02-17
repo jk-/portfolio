@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Jon Kirkpatrick - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% block css_header %}
+            {% assets "scss_main" -%}
+                <link rel="stylesheet" href="{{ ASSET_URL }}" />
+            {%- endassets %}
+            {% assets "css_all" -%}
+                <link rel="stylesheet" href="{{ ASSET_URL }}" />
+            {%- endassets %}
+        {% endblock %}
+        <noscript>
+            {%- assets "scss_ns" -%}
+                <link rel="stylesheet" href="{{ ASSET_URL }}" />
+            {%- endassets -%}
+        </noscript>
+	</head>
+    {% set bodyClass = "is-preloaded" %}
+    <body class="{{ bodyClass }}">
+			<div id="wrapper">
+					<section id="main">
+						<header>
+							<span class="avatar">
+                                <img src="
+                                {{ url_for('static', filename='images/avatar.jpg') }}" alt="" />
+                            </span>
+							<h1>Jon Kirkpatrick</h1>
+							<p>Senior Software Engineer</p>
+						</header>
+						<footer>
+							<ul class="icons">
+								<li><a href="http://www.github.com/jk-" target="_new" class="fa-github">Github</a></li>
+							</ul>
+						</footer>
+					</section>
+
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Jon Kirkpatrick</li></li>
+						</ul>
+					</footer>
+
+			</div>
+
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>
