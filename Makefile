@@ -9,3 +9,4 @@ assets:
 	mkdir -p ./app/static
 	cp -fr ./node_modules/font-awesome/fonts ./app/static
 	cp -fr ./app/assets/images ./app/static
+	cp -fr ./app/assets/downloads ./app/static/downloads
