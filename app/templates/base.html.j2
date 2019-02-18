@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}{{ site_name }} - A Flask app in the Cloud{% endblock %}</title>
+        <title>{% block title %}{{ site_name }}{% endblock %}</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         {% block css_header %}
-            {% assets "scss_main" -%}
-                <link rel="stylesheet" href="{{ ASSET_URL }}" />
-            {%- endassets %}
-            {% assets "css_all" -%}
-                <link rel="stylesheet" href="{{ ASSET_URL }}" />
-            {%- endassets %}
+        {% assets "scss_main" -%}
+            <link rel="stylesheet" href="{{ ASSET_URL }}" media="screen,projection" />
+        {%- endassets %}
+          {% assets "scss_material" -%}
+              <link rel="stylesheet" href="{{ ASSET_URL }}" media="screen,projection" />
+          {%- endassets %}
         {% endblock %}
-        <noscript>
-            {%- assets "scss_ns" -%}
-                <link rel="stylesheet" href="{{ ASSET_URL }}" />
-            {%- endassets -%}
-        </noscript>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body class="{{ bodyClass }}">
-        <div id="page-wrapper">
-            {% block body_header %}
-                {% include 'components/menu.html.j2' %}
-            {% endblock %}
-            {% block body %}{% endblock body %}
-            {% block footer -%}
-                {% include 'components/footer.html.j2' %}
-            {%- endblock footer %}
-        </div>
+        {% block body %}{% endblock body %}
+        {% block footer -%}
+            {% include 'components/footer.html.j2' %}
+        {%- endblock footer %}
+
         {% block js_footer %}
             {% assets "js_all" -%}
                 <script async src="{{ ASSET_URL }}"></script>

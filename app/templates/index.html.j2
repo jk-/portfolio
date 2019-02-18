@@ -1,54 +1,153 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Jon Kirkpatrick - Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        {% block css_header %}
-            {% assets "scss_main" -%}
-                <link rel="stylesheet" href="{{ ASSET_URL }}" />
-            {%- endassets %}
-            {% assets "css_all" -%}
-                <link rel="stylesheet" href="{{ ASSET_URL }}" />
-            {%- endassets %}
-        {% endblock %}
-        <noscript>
-            {%- assets "scss_ns" -%}
-                <link rel="stylesheet" href="{{ ASSET_URL }}" />
-            {%- endassets -%}
-        </noscript>
-	</head>
-    {% set bodyClass = "is-preloaded" %}
-    <body class="{{ bodyClass }}">
-			<div id="wrapper">
-					<section id="main">
-						<header>
-							<span class="avatar">
-                                <img src="
-                                {{ url_for('static', filename='images/avatar.jpg') }}" alt="" />
-                            </span>
-							<h1>Jon Kirkpatrick</h1>
-							<p>Senior Software Engineer</p>
-						</header>
-						<footer>
-							<ul class="icons">
-								<li><a href="http://www.github.com/jk-" target="_new" class="fa-github">Github</a></li>
-							</ul>
-                            <a href="{{ url_for('static', filename="downloads/Jon Kirkpatrick - Resume.pdf") }}">Resume</a>
-						</footer>
-					</section>
+{% extends 'base.html.j2' %}
+{% import 'macros/social.html.j2' as social %}
 
-					<footer id="footer">
-					</footer>
+{% block body %}
+<div class="row">
+    <div class="sidenav sidenav-fixed col s3 grey lighten-3">
+        <div class="center-align avatar">
+            <img src="{{ url_for('static', filename="images/avatar.jpg") }}" class="circle" />
+        </div>
+        <div class="user-view center-align">
+            <h5>Jon Kirkpatrick</h5>
+            <div class="title">Senior Software Engineer</div>
+            <div class="email" ><a href="mailto:basilieus@gmail.com">basilieus@gmail.com</a></div>
+        </div>
 
-			</div>
+        <div class="user-view">
+            <div>Resume</div>
+            <div><a href="http://github.com/jk-">Github</a></div>
+        </div>
+    </div>
 
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
-
-	</body>
-</html>
+    <div class="col s9 offset-s3">
+        <div class="timeline">
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>Now</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h5>Looking for a Full-Time Role</h5>
+                    <p>
+                        Currently seeking a full time role either as a <strong>Full-Stack Developer</strong>, <strong>Python Developer</strong> or a <strong>CTO position</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>2018</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Talis</h4>
+                    <h6>Personal Project</h6>
+                    <p>
+                        A Microservice NLP AI Twitch Bot written in Python utilizing Docker, Kafka and Zookeeper.
+                    </p>
+                    <p>Github: <a href="http://github.com/jk-/talis" target="portfolio">Talis</a></p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">Python</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Kafka</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Zookeeper</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Pytest</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS ECR</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS EC2</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS Code Pipeline</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS Code Build</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>2015 - Present</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Stone Torch</h4>
+                    <h6>CEO / Owner</h6>
+                    <p>
+                        Stone Torch produces high quality, asymmetrical investment ideas for hedge funds, family offices and professional traders. Stone Torch also offers macroeconomic models and advanced economic forecasting tools deliverable in Excel.
+                    </p>
+                    <ul class="bullet">
+                        <li>Nov of 2015, took a sabbatical from programming to learn new skills and a new profession. Started Stone Torch from scratch.</li>
+                        <li>Produced macroeconomic models to generate high quality asymmetrical invest ideas for hedge funds, family offices and professional traders. Primarily Long/Short Equity.</li>
+                        <li>Built and maintained company website.</li>
+                        <li>Integrated Stripe payment processing (Recurring Billing) and custom integrations with Box.com for Excel sheet delivery in the cloud.</li>
+                        <li>Integrated SSL and DNS configurations.</li>
+                        <li>Integrated company emails using Google’s G Suite.</li>
+                        <li>Marketed my analysis and ran marketing campaigns on Twitter.</li>
+                    </ul>
+                    <p>Website: <a href="https://www.stonetorch.com" target="portfolio">Stone Torch</a></p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">Symfony PHP</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">jQuery</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Heroku</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">MySQL (ClearDB)</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Redis</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Memcached</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS Cloudfront / S3</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Gulp, NPM, Composer</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Raygun</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">SendGrid</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>2011 - 22015</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Chess.com</h4>
+                    <h6>CTO / Senior Software Engineer</h6>
+                    <p>
+                        Chess.com is the world’s largest online gaming website for chess. With over 25 million members and over 1.5 million games played a day. It’s the number one destination for all things chess.
+                    </p>
+                    <ul class="bullet">
+                        <li>Kept the site fast and responsive; allowing the site to grow from 200K users to over 20 million.
+                        <li>Integration of tech stack and company-wide communications.</li>
+                        <li>Interviewed and hired new talent. Grew and managed development team from three members to fourteen.</li>
+                        <li>Sucessfully planned, managed and integrated new features.</li>
+                    </ul>
+                    <p>Website: <a href="https://www.chess.com" target="portfolio">Chess.com</a></p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">Symfony PHP</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Angular</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Gulp/LessCSS</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">NPM</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Jira</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">HipChat</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">GIT/GitHub</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Vagrant</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS S3/CloudFront</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Jenkins</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Nginx</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Memcached</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">MySQL</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">PHPUnit</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>2003-2011</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Freelancer</h4>
+                    <h6>Self-employed</h6>
+                    <p>
+                        Provided numerous companies with advice, project implementations and training related to web development in e-commerce, gaming, product mapping of vehicle specifications, image processing, billing implementations, performance improvements and scripts that could offload tedious tasks.
+                    </p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">Drupal, Wordpress (PHP)</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">jQuery</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Subversion</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Git</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Photoshop</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Dreamweaver</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Flash</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">X-Cart (PHP)</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">HTML/CSS</span></li>
+                    </ul>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

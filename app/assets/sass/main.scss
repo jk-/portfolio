@@ -1,71 +1,90 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+@import "materialize/components/color-variables";
 
-/*
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+.timeline {
+    margin-top: 3em;
+    .timeline_element {
+        padding: 0px;
+        margin-bottom: 0px;
+        p {
+            padding-bottom: 1em;
+        }
+        :last-child {
+            padding-bottom: 2em;
+        }
+    }
+}
 
-// Breakpoints.
+.timeline_element-time {
+    time {
+        display: inline-block;
+        padding-right: 1em !important;
+        margin-top: 6px;
+    }
+}
 
-	@include breakpoints((
-		xlarge:    (1281px,   1680px   ),
-		large:     (961px,    1280px   ),
-		medium:    (737px,    960px    ),
-		small:     (481px,    736px    ),
-		xsmall:    (361px,    480px    ),
-		xxsmall:   (null,     360px    )
-	));
+.timeline_element-content {
+    &:before {
+        content: ' ';
+        width: 8px;
+        height: 8px;
+        background-color: red;
+        display: inline-block;
+        position: absolute;
+        left: -4px;
+        top: 1em;
+    }
+    position: relative;
+    border-left: 1px solid lightgrey;
+    padding: 0 2em !important;
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
 
-/* Icon (alt) */
+    h6 {
+        margin-bottom: 2em;
+    }
+}
 
-	@mixin icon-alt($content: false, $link: false) {
-		@include icon($content);
-		$size: _size(border-width) * 1.25;
+ul.technology {
+    li {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    margin-bottom: 0 !important;
+}
 
-		&:before {
-			color: _palette(bg);
-			text-shadow: $size 0px 0px _palette(border),
-						($size * -1) 0px 0px _palette(border),
-						0px $size 0px _palette(border),
-						0px ($size * -1) 0px _palette(border);
+ul.bullet {
+    list-style-type: square;
+    li {
+        list-style-type: square !important;
+        margin-left: 1em;
+    }
+}
 
-		}
+.avatar {
+    margin-top: 3em;
+}
 
-		@if $link {
-			&:hover {
-				&:before {
-					text-shadow: $size 0px 0px _palette(highlight),
-								($size * -1) 0px 0px _palette(highlight),
-								0px $size 0px _palette(highlight),
-								0px ($size * -1) 0px _palette(highlight);
-				}
-			}
-		}
-	}
+.user-view {
+    padding-top: 1em !important;
+    li {
+        padding: 0px !important;
+        margin: 0px !important;
+        line-height: 1em;
+    }
+    .title, .name {
+        font-weight: bold;
+    }
+    .title {
+        margin-bottom: 10px;
+    }
+}
 
-// Base.
+a:link, a:active, a:visited {
+    color: map-get($red, "base");
+}
 
-	@import 'base/reset';
-	@import 'base/page';
-	@import 'base/typography';
-
-// Component.
-
-	@import 'components/form';
-	@import 'components/icon';
-	@import 'components/list';
-	@import 'components/actions';
-	@import 'components/icons';
-	@import 'components/button';
-
-// Layout.
-
-	@import 'layout/main';
-	@import 'layout/footer';
-	@import 'layout/wrapper';
+a:hover {
+    text-decoration: underline;
+}

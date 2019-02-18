@@ -5,25 +5,25 @@ class ConcatFilter(Filter):
     def concat(self, out, hunks, **kw):
         out.write(';'.join([h.data() for h, info in hunks]))
 
+scss_material = Bundle(
+    '../assets/sass/materialize/main.scss',
+    filters=('libsass', 'cssmin'),
+    output='css/materialize.css'
+)
+
 scss_main = Bundle(
     '../assets/sass/main.scss',
     filters=('libsass', 'cssmin'),
     output='css/main.css'
 )
 
-scss_ns = Bundle(
-    '../assets/sass/noscript.scss',
-    filters=('libsass', 'cssmin'),
-    output='css/noscript.css'
-)
-
-css = Bundle(
-    '../../node_modules/font-awesome/css/font-awesome.css',
-    filters=('cssmin'),
-    output='css/packed.css'
+js = Bundle(
+    '../assets/js/materialize.js',
+    filters=(ConcatFilter, 'jsmin'),
+    output='js/packed.js'
 )
 
 assets = Environment()
+assets.register('scss_material', scss_material)
 assets.register('scss_main', scss_main)
-assets.register('scss_ns', scss_ns)
-assets.register('css_all', css)
+assets.register('js_all', js)
