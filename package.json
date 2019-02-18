@@ -4,5 +4,8 @@
   "main": "index.js",
   "author": "bas <basilieus@gmail.com>",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "heroku-postbuild": "make assets"
+  },
 }
