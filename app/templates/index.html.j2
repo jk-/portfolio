@@ -3,7 +3,7 @@
 
 {% block body %}
 <div class="row">
-    <div class="sidenav sidenav-fixed col s3 grey lighten-3">
+    <div class="sidenav sidenav-fixed col s3 transparent">
         <div class="center-align avatar">
             <img src="{{ url_for('static', filename="images/avatar.jpg") }}" class="circle" />
         </div>
@@ -13,13 +13,13 @@
             <div class="email" ><a href="mailto:basilieus@gmail.com">basilieus@gmail.com</a></div>
         </div>
 
-        <div class="user-view">
-            <div>Resume</div>
+        <div class="user-view links">
+            <div><a href="{{ url_for('static', filename="downloads/Jon Kirkpatrick - Resume.pdf") }}">Resume</a></div>
             <div><a href="http://github.com/jk-">Github</a></div>
         </div>
     </div>
 
-    <div class="col s9 offset-s3">
+    <div class="col s8 offset-s3">
         <div class="timeline">
             <div class="timeline_element row">
                 <div class="col s2 right-align timeline_element-time">
@@ -91,7 +91,7 @@
             </div>
             <div class="timeline_element row">
                 <div class="col s2 right-align timeline_element-time">
-                    <time>2011 - 22015</time>
+                    <time>2011 - 2015</time>
                 </div>
                 <div class="col s10 timeline_element-content">
                     <h4>Chess.com</h4>
