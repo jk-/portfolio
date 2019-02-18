@@ -87,21 +87,6 @@ ul.bullet {
     .title {
         margin-bottom: 10px;
     }
-    &.links {
-        div {
-            margin-left: 1em;
-            &:before {
-                content: ' ';
-                width: 5px;
-                height: 5px;
-                background-color: map-get($red, "base");
-                display: inline-block;
-                vertical-align: middle;
-                left: -5px;
-                position: relative;
-            }
-        }
-    }
 }
 
 a:link, a:active, a:visited {
