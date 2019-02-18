@@ -6,7 +6,7 @@ class base_config(object):
 
     SITE_NAME = os.environ.get('APP_NAME', 'Jon Kirkpatrick - Portfolio')
     SECRET_KEY = os.environ.get('SECRET_KEY', 'itsasecret')
-    SERVER_NAME = os.environ.get('SERVER_NAME', 'localhost:5000')
+    SERVER_NAME = os.environ.get('SERVER_NAME', '0.0.0.0:5000')
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
 
 
