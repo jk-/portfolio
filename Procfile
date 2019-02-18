@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:5000 serve:app --preload
+web: gunicorn serve:app --preload
