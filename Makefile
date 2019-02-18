@@ -4,7 +4,6 @@ init:
 	pip install -r requirements.txt
 
 assets:
-	yarn install
 	rm -rf ./app/static
 	mkdir -p ./app/static
 	cp -fr ./app/assets/images ./app/static

@@ -1,6 +1,7 @@
 from flask_assets import Bundle, Environment, Filter
 from flask import Flask
 
+
 class ConcatFilter(Filter):
     def concat(self, out, hunks, **kw):
         out.write(';'.join([h.data() for h, info in hunks]))

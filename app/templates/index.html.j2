@@ -31,9 +31,27 @@
     {{ super() }}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-          M.AutoInit();
-          var elems = document.querySelectorAll('.tooltipped');
-          var instances = M.Tooltip.init(elems, {outDuration: 0});
+            M.AutoInit();
+            var elems = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(elems, {outDuration: 0});
+
+            var buttons = document.getElementsByClassName('btn-flat');
+            for(var i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener("click", function(i) {
+                    i.preventDefault();
+                    var goto = i.target.href;
+                    console.log(i);
+                    document.body.classList.remove("animate-out");
+                    document.body.classList.add("animate-out");
+                    setTimeout(function()
+                    {
+                        window.location = goto;
+                    }, 1000);
+                })
+            }
         });
+
+
+
     </script>
 {% endblock %}

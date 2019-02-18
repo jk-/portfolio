@@ -10,6 +10,18 @@
     background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg.jpg);
 }
 
+.animate-out {
+    .btn-flat, .footer-copyright {
+        transition: height 250ms ease-in-out, opacity 400ms ease-in-out;
+        opacity: 0 !important;
+    }
+    .hero {
+        transition: height 250ms ease-in-out, opacity 400ms ease-in-out;
+        transition-delay: 300ms;
+        opacity: 0 !important;
+    }
+}
+
 .hero {
     font-weight: bold;
     h4.name {
