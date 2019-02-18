@@ -12,6 +12,7 @@ scss_material = Bundle(
 )
 
 scss_main = Bundle(
+    '../assets/sass/index.scss',
     '../assets/sass/main.scss',
     filters=('libsass', 'cssmin'),
     output='css/main.css'

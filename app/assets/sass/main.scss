@@ -89,10 +89,12 @@ ul.bullet {
     }
 }
 
-a:link, a:active, a:visited {
-    color: map-get($red, "base");
-}
+.portfolio {
+    a:link, a:active, a:visited {
+        color: map-get($red, "base");
+    }
 
-a:hover {
-    text-decoration: underline;
+    a:hover {
+        text-decoration: underline;
+    }
 }

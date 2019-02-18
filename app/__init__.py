@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from app.config import base_config
 from app.assets import assets
 
-from app.blueprints.portfolio import portfolio_page
+from app.blueprints.portfolio import portfolio
 
 import requests
 
@@ -25,7 +25,7 @@ def register_extensions(app):
     assets.init_app(app)
 
 def register_blueprints(app):
-    app.register_blueprint(portfolio_page, url_prefix="/portfolio")
+    app.register_blueprint(portfolio, url_prefix="/portfolio")
 
 def register_jinja_env(app):
     app.jinja_env.globals.update({

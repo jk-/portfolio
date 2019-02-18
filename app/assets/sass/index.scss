@@ -1,0 +1,40 @@
+.landing {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0;
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg.jpg);
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg.jpg);
+    background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg.jpg);
+}
+
+.hero {
+    .name {
+    }
+}
+
+ul.action {
+    margin-top: 3em;
+    li {
+        display: inline-block;
+        .btn-flat {
+            opacity: 0.9;
+        }
+    }
+}
+
+.footer-copyright {
+    opacity: 0.5;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}

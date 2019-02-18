@@ -1,0 +1,192 @@
+{% extends 'base.html.j2' %}
+
+{% set bodyClass = 'portfolio' %}
+
+{% block body %}
+<div class="row">
+    <div class="sidenav sidenav-fixed col s3 transparent">
+        <div class="center-align avatar">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename="images/avatar.jpg") }}" class="" /></a>
+        </div>
+        <div class="user-view center-align">
+            <h5>Jon Kirkpatrick</h5>
+            <div class="title">Senior Software Engineer</div>
+            <div class="email" ><a href="mailto:basilieus@gmail.com">basilieus@gmail.com</a></div>
+        </div>
+
+        <div class="center-align">
+            <a href="{{ url_for('static', filename="downloads/Jon Kirkpatrick - Resume.pdf") }}" target="portfolio">
+                <i class="small material-icons tooltipped" data-position="top" data-tooltip="Resume">description</i>
+            </a>
+            <a href="http://github.com/jk-" target="portfolio">
+                <i class="small material-icons tooltipped" data-position="top" data-tooltip="Github">account_circle</i>
+            </a>
+        </div>
+    </div>
+
+    <div class="col s11 offset-l3 l8">
+        <div class="timeline">
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>Now</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Accepting Job Offers</h4>
+                    <p>
+                        Currently seeking a Senior Full-Time position, either as a <strong class="red-text">Full-Stack Developer</strong>, <strong class="red-text">Python Developer</strong> or a <strong class="red-text">CTO position</strong>. A company utilizing a microservice architecture (<span class="red-text">Docker</span>) and working with <span class="red-text">VueJS</span> or <span class="red-text">React</span>, with some <span class="red-text">Machine Learning</span> would be a plus.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>Dec. 2018</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Talis</h4>
+                    <h6>Personal Project</h6>
+                    <p>
+                        A Microservice NLP (Natural Language Processing) Twitch Bot written in <strong class="red-text">Python</strong> utilizing <strong class="red-text">Docker, Kafka and Zookeeper</strong>. I trained a Twitch Bot to chat like a real twitch user. I parse over 70,000 twitch messages and run a TF-IDF Algo doing a pairwise consine similarity to find the best response. Kafka is used for real-time pub/sub of twitch chat messages. Many other features listed on the github page.
+                    </p>
+                    <p>Github: <a href="http://github.com/jk-/talis" target="portfolio">Talis</a></p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">Python</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Docker</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Kafka</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Zookeeper</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Pytest</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS ECR</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS EC2</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS Code Pipeline</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS Code Build</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>2015 - Present</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Stone Torch</h4>
+                    <h6>CEO / Owner</h6>
+                    <p>
+                        Stone Torch produces high quality, asymmetrical investment ideas for hedge funds, family offices and professional traders. Stone Torch also offers macroeconomic models and advanced economic forecasting tools deliverable in Excel.
+                    </p>
+                    <ul class="bullet">
+                        <li>Nov of 2015, took a sabbatical from programming to learn new skills and a new profession. Started Stone Torch from scratch.</li>
+                        <li>Produced macroeconomic models to generate high quality asymmetrical invest ideas for hedge funds, family offices and professional traders. Primarily Long/Short Equity.</li>
+                        <li>Built and maintained company website.</li>
+                        <li>Integrated Stripe payment processing (Recurring Billing) and custom integrations with Box.com for Excel sheet delivery in the cloud.</li>
+                        <li>Integrated SSL and DNS configurations.</li>
+                        <li>Integrated company emails using Google’s G Suite.</li>
+                        <li>Marketed my analysis and ran marketing campaigns on Twitter.</li>
+                    </ul>
+                    <p>Website: <a href="https://www.stonetorch.com" target="portfolio">Stone Torch</a></p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">Symfony PHP</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">jQuery</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Heroku</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">MySQL (ClearDB)</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Redis</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Memcached</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS Cloudfront / S3</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Gulp, NPM, Composer</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Raygun</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">SendGrid</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>2011 - 2015</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Chess.com</h4>
+                    <h6>CTO / Senior Software Engineer</h6>
+                    <p>
+                        Chess.com is the world’s largest online gaming website for chess. With over 25 million members and over 1.5 million games played a day. It’s the number one destination for all things chess.
+                    </p>
+                    <ul class="bullet">
+                        <li>Kept the site fast and responsive; allowing the site to grow from 200K users to over 20 million.</li>
+                        <li>Integration of tech stack and company-wide communications.</li>
+                        <li>Interviewed and hired new talent. Grew and managed development team from three members to fourteen.</li>
+                        <li>Sucessfully planned, managed and integrated new features.</li>
+                    </ul>
+                    <p>Website: <a href="https://www.chess.com" target="portfolio">Chess.com</a></p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">Symfony PHP</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Angular</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Gulp/LessCSS</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">NPM</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Jira</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">HipChat</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">GIT/GitHub</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Vagrant</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">AWS S3/CloudFront</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Jenkins</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Nginx</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Memcached</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">MySQL</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">PHPUnit</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>2008-2009</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>QCubed</h4>
+                    <h6>Open Source Contributions</h6>
+                    <p>
+                        The QCubed Development Framework is an open-source PHP framework that focuses on freeing developers from unnecessary tedious, mundane coding. It's a fork of the Qcodo framwork. [DEPRECATED]
+                    </p>
+                    <ul class="bullet">
+                        <li>Client-side peformance improvements by reducing QControl usage and html wrappers</li>
+                        <li>Inegrated jQuery into the platform.</li>
+                    </ul>
+                    <p>Website: <a href="http://qcubed.github.io/" target="portfolio">QCubed</a></p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">PHP</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">jQuery</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline_element row">
+                <div class="col s2 right-align timeline_element-time">
+                    <time>2003-2011</time>
+                </div>
+                <div class="col s10 timeline_element-content">
+                    <h4>Freelancer</h4>
+                    <h6>Self-employed</h6>
+                    <p>
+                        Provided numerous companies with advice, project implementations and training related to web development in e-commerce, gaming, product mapping of vehicle specifications, image processing, billing implementations, performance improvements and scripts that could offload tedious tasks.
+                    </p>
+                    <ul class="technology">
+                        <li><span class="btn-flat z-depth-1 red white-text">Drupal, Wordpress (PHP)</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">jQuery</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Subversion</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Git</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Photoshop</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Dreamweaver</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">Flash</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">X-Cart (PHP)</span></li>
+                        <li><span class="btn-flat z-depth-1 red white-text">HTML/CSS</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+{% block js_footer %}
+    {{ super() }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          M.AutoInit();
+          var elems = document.querySelectorAll('.tooltipped');
+          var instances = M.Tooltip.init(elems, {outDuration: 0});
+        });
+    </script>
+{% endblock %}
