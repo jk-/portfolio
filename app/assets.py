@@ -21,6 +21,7 @@ scss_main = Bundle(
 
 js = Bundle(
     '../assets/js/materialize.js',
+    '../assets/js/blazy.js',
     filters=(ConcatFilter, 'jsmin'),
     output='js/packed.js'
 )
