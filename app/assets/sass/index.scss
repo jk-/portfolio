@@ -1,4 +1,7 @@
 .landing {
+}
+
+.landing-bg {
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
@@ -8,6 +11,9 @@
     background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg.jpg);
     background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg.jpg);
     background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg.jpg);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
 }
 
 .animate-out {
@@ -19,6 +25,29 @@
         transition: height 250ms ease-in-out, opacity 400ms ease-in-out;
         transition-delay: 300ms;
         opacity: 0 !important;
+    }
+    .landing-bg {
+        animation: animate 3s ease;
+        animation-delay: 1s;
+    }
+}
+
+
+@keyframes animate {
+    10% {
+        transform: scale(1, 0.002);
+    }
+    35% {
+        transform: scale(0.2, 0.002);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.2, 0.002);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0, 0);
+        opacity: 0;
     }
 }
 
@@ -54,4 +83,5 @@ body {
 
 main {
     flex: 1 0 auto;
+    z-index: 10;
 }

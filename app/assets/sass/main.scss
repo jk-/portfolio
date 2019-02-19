@@ -90,6 +90,8 @@ ul.bullet {
 }
 
 .portfolio {
+    animation: fadein 2s ease;
+
     a:link, a:active, a:visited {
         color: map-get($red, "base");
     }
@@ -97,4 +99,9 @@ ul.bullet {
     a:hover {
         text-decoration: underline;
     }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
