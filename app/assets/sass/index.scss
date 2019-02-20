@@ -6,10 +6,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg-preload.jpg);
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg-preload.jpg);
-    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg-preload.jpg);
-    background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/static/images/bg-preload.jpg);
     padding-top: 0;
     position: fixed;
     width: 100vw;
@@ -84,16 +80,4 @@ body {
 main {
     flex: 1 0 auto;
     z-index: 10;
-}
-
-.b-lazy {
-    -webkit-transition: opacity 2s ease-in-out;
-       -moz-transition: opacity 2s ease-in-out;
-         -o-transition: opacity 2s ease-in-out;
-            transition: opacity 2s ease-in-out;
-             max-width: 100%;
-               opacity: 0.2;
-}
-.b-lazy.b-loaded {
-   opacity: 1;
 }
